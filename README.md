@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# <p align="center"> Public APIs api</p>
 
-## Getting Started
+a list to 1400+ apis how they are used, their documentation, properties and a lot more all divided int 50+ cateogories all this data just a api call away 🚀
 
-First, run the development server:
+# How to use 🤔
 
-```bash
-npm run dev
-# or
-yarn dev
+## 🐛 Get Categories
+
+this api endpoint gives you a list of categories APIs are available in
+
+`https://public-apis-api.vercel.app/api/apis`
+
+this will return you a name object contaning array of all API name and slug for that api details
+
+example response
+
+```js
+{
+  "name": [
+    [
+      "Animals",
+      "animals"
+    ],
+    [
+      "API 2",
+      "slug_for_api_2"
+    ]
+  ]
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗯️ Get data by category
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+this api endpoint gives you a data by categories of API slug you provide ( slug can be obtained by previous endpoint as in upper example )
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+`https://public-apis-api.vercel.app/api/apis/slug_of_api`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+this will return a `data` object contaning array of APIs
 
-## Learn More
+example query
+`https://public-apis-api.vercel.app/api/apis/animals`
 
-To learn more about Next.js, take a look at the following resources:
+response:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```js
+{
+  "data": [
+    [
+      "API_name",
+      "URL to api docs",
+      "Api Description",
+      "Auth",
+      "https",
+      "cors"
+    ],
+    [
+      "AdoptAPet",
+      "https://www.adoptapet.com/public/apis/pet_list.html",
+      "Resource to help get pets adopted",
+      "apiKey",
+      "Yes",
+      "Yes"
+    ]
+  ]
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contribution
 
-## Deploy on Vercel
+Everyone is Welcome to Contribute :)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can reach me on [Twitter @pushkaryadav\_](https://twitter.com/pushkaryadav_)
