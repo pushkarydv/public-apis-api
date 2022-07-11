@@ -3,7 +3,6 @@
 a list to 1400+ apis how they are used, their documentation, properties and a lot more all divided int 50+ cateogories all this data just a api call away 🚀
 
 # How to use 🤔
-we suggest using axios for this
 
 ## 🐛 Get Categories
 
